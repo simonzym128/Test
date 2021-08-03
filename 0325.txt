@@ -1,0 +1,31 @@
+Model comparison:
+No PET images: sequence of cognitive score and cognitive status as well as baseline information;
+PET images: all above plus PET images;
+
+
+Q1: how much more information does PET images give us? 
+
+Models (include PET images): 
+1. CNN for feature extraction, then RNN for sequence classification;
+2. CNN for feature extraction, then GNN for graph classification;
+?3. CNN for feature extraction + RNN for sequence classification (same time);
+?4. CNN for feature extraction, Transformer/attention for sequence classification;
+?5. CNN for feature extraction + Transformer/attention for sequence classification (same time).
+
+Models (exclude PET images):
+1. RNN for sequence classification;
+2. GNN for graph classification;
+?3. Transformer/attention for sequence classification.
+
+Q2. is using sequence of data better than using data of the last time point (closet to outcome time point) in terms of prediction?
+
+Models (include PET images):
+1. CNN/Fully connected layer for image classification (only image);
+2. Linear model where inputs include: age, gender, last cognitive status, last cognitive status change 
+   and some statistic of the last available PET image (avg SUVR);
+
+Model (exclude PET images):
+Linear model where inputs does not include information of PET image.
+
+*Use regression instead when using MMSE and ADAS-cog11 as outcome; use classification when using cognitive status and CDR as outcome. 
+For consistency, for seperate CNN (feature extraction), we use cognitive status as outcome as it 
