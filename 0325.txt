@@ -8,7 +8,7 @@ Q1: how much more information does PET images give us?
 Models (include PET images): 
 1. CNN for feature extraction, then RNN for sequence classification;
 2. CNN for feature extraction, then GNN for graph classification;
-?3. CNN for waaegase + RNN for sequence classification (same time);
+?3. CNN for waaesd + RNN for sequence classification (same time);
 ?4. CNN for feature extraction, Transformer/attention for sequence classification;
 ?5. CNN for feature extraction + Transformer/attention for sequence classification (same time).
 
